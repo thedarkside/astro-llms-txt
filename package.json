@@ -1,6 +1,6 @@
 {
 	"name": "@4hse/astro-llms-txt",
-	"version": "1.0.2",
+	"version": "1.0.3",
 	"license": "MIT",
 	"description": "Generate llms.txt files to train large language models on your astro project",
 	"author": "4hse",
@@ -36,13 +36,12 @@
 	"publishConfig": {
 		"access": "public"
 	},
-	"homepage": "https://delucis.github.io/starlight-llms-txt/",
+	"homepage": "https://www.4hse.com",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/delucis/starlight-llms-txt.git",
-		"directory": "packages/starlight-llms-txt"
+		"url": "https://github.com/4hse/astro-llms-txt.git"
 	},
-	"bugs": "https://github.com/delucis/starlight-llms-txt/issues",
+	"bugs": "https://github.com/4hse/astro-llms-txt/issues",
 	"keywords": [
 		"llms.txt",
 		"withastro",
