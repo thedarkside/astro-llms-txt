@@ -1,6 +1,6 @@
 {
 	"name": "@4hse/astro-llms-txt",
-	"version": "1.0.1",
+	"version": "1.0.2",
 	"license": "MIT",
 	"description": "Generate llms.txt files to train large language models on your astro project",
 	"author": "4hse",
