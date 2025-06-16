@@ -1,12 +1,12 @@
 {
 	"name": "@4hse/astro-llms-txt",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"license": "MIT",
 	"description": "Generate llms.txt files to train large language models on your astro project",
 	"author": "4hse",
 	"type": "module",
 	"exports": {
-		".": "./index.ts"
+		".": "./src/index.ts"
 	},
 	"dependencies": {
 		"@astrojs/mdx": "^4.0.5",
