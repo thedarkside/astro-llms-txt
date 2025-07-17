@@ -6,6 +6,7 @@ import remarkGfm from 'remark-gfm';
 import remarkStringify from 'remark-stringify';
 import { unified } from 'unified';
 import { remove } from 'unist-util-remove';
+import { accessibilityTransformer } from './accessibilityTransformer';
 
 /**
  * Selector to get for minification
@@ -14,6 +15,8 @@ const structureSelectors = ['h2','h3','h4','h5','h6','ul','ol','li'];
 
 const htmlToMarkdownPipeline = unified()
 	.use(rehypeParse, { fragment: true })
+
+	.use(accessibilityTransformer)
 
 	.use(function removeSomeElements() {
 		return (tree, file) => {
