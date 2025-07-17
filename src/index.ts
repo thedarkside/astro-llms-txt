@@ -10,6 +10,7 @@ interface DocSet {
   description: string;
   url: string;
   include: string[];
+  exclude: string[];
   promote?: string[];
   demote?: string[];
   onlyStructure?: boolean;
@@ -102,11 +103,17 @@ async function processDocSet(args: {
   const { context, collator, set } = args;
   const { distDir, pages, config } = context;
 
-  const matches = pages
+  let matches = pages
     .map(p => p.pathname)
     .filter(pn =>
       set.include.some(pat => micromatch.isMatch(pn, pat))
+    )
+
+  if (set.exclude) {
+    matches = matches.filter(pn =>
+        !set.exclude.some(pat => micromatch.isMatch(pn, pat))
     );
+  }
 
   const sorted = matches.sort((a, b) => {
     const pa = prioritizePathname(a, set.promote, set.demote);
